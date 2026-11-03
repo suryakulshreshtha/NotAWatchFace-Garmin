@@ -17,12 +17,12 @@ Neither face uses the internet, your phone or any outside service. Every value
 comes from the watch's own clock, sensors and last GPS position, or is
 calculated inside the face.
 
-## Your watch and build target
+## Target watch and build device
 
-Your watch is the **Instinct 2 Solar - Tactical Edition** (45 mm). Build both
-faces for Garmin's device target **instinct2**.
+These faces are made for the **Instinct 2 Solar - Tactical Edition** (45 mm).
+Build both faces for Garmin's device target **instinct2**.
 
-| Item | Your watch |
+| Item | Value |
 | --- | --- |
 | Connect IQ device | Instinct 2 / Solar / Dual Power / dezl Edition (`instinct2`) |
 | Screen | 176 x 176 pixels, 2 colors (black and white), memory-in-pixel |
@@ -58,14 +58,19 @@ need OpenMTP for the USB copy (see "Copy to the watch over USB").
 
 ### If VS Code shows "Unable to find Java in the path" or "Java path not set" (Mac)
 
-The Monkey C extension needs Java 17 or newer, and it looks for a `java`
+The Monkey C extension needs a recent Java, and it looks for a `java`
 command on your Mac. macOS's built-in `java` command only finds Java installed
 in the system Java folder, `/Library/Java/JavaVirtualMachines`. PyCharm,
-Android Studio and IntelliJ IDEA each ship a complete Java inside the app, but
-macOS doesn't know about it until you register it in that folder with a
-shortcut. Homebrew's own instructions for its Java use the same method.
+IntelliJ IDEA and Android Studio run on the JetBrains Runtime, a Java that
+comes with each app, but macOS doesn't know about it until you register it in
+that folder with a shortcut. Homebrew's own instructions for its Java use the
+same method.
 
-#### Option A: register PyCharm's built-in Java (no download, confirmed working on this Mac)
+Options A and B below use `sudo`, which asks for your Mac's administrator
+password and changes the system Java folder. Read each command before you run
+it. Each option says how to undo it.
+
+#### Option A: register PyCharm's built-in Java (no download; this is the route that worked for the author)
 
 1. Confirm PyCharm's Java works:
 
@@ -73,8 +78,10 @@ shortcut. Homebrew's own instructions for its Java use the same method.
    /Applications/PyCharm.app/Contents/jbr/Contents/Home/bin/java -version
    ```
 
-   It should print `openjdk version "21.0.6"`. Anything 17 or newer works.
-2. Register it with macOS. This asks for your Mac password and only adds a
+   It should print an `openjdk version` line. The author's working version was 21;
+   if Monkey C later reports a Java version problem, use Option C, which
+   installs version 21.
+2. Register it with macOS. This asks for your Mac's administrator password and only adds a
    shortcut; nothing is copied and PyCharm isn't changed:
 
    ```
@@ -103,8 +110,8 @@ with Option B.
 #### Option B: switch to Android Studio's built-in Java
 
 Use this if PyCharm is removed, or if Option A stops working. It's the same
-method as Option A, pointed at Android Studio. It hasn't been run on this Mac
-yet, so check each step's output before moving on.
+method as Option A, pointed at Android Studio. It has not been tested by the
+author, so check each step's output before moving on.
 
 Android Studio keeps its Java at `/Applications/Android Studio.app/Contents/jbr`.
 The app name contains a space, so every command below keeps that path in
@@ -116,7 +123,7 @@ quotes; the shortcut's own name has no space.
    "/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java" -version
    ```
 
-   Expect `openjdk version` 17 or newer.
+   Expect an `openjdk version` line.
 2. **Remove the PyCharm shortcut**, if it's there, so macOS doesn't keep using it:
 
    ```
@@ -178,7 +185,7 @@ reuse it for every build of both faces.
 
 1. In VS Code, run **Monkey C: Generate a Developer Key** from the command palette.
 2. Save the key file in a folder **outside** both project folders, for example
-   `Documents/garmin-key/`.
+   `Documents/garmin-key/`. Keep it private: never commit it to Git or share it.
 3. Back that file up. A watch face rebuilt with a different key is a signature
    mismatch: developers on Garmin's forum report "Signature check failed" errors
    and the face being removed when the key isn't set up correctly.
