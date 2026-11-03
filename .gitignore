@@ -1,0 +1,25 @@
+# ---- Signing keys and secrets: never commit these ----
+developer_key
+developer_key.*
+*.der
+*.pem
+*.p12
+*.pfx
+*.key
+.env
+.env.*
+
+# ---- Build output ----
+bin/
+builds/
+*.prg
+*.iq
+*.prg.debug.xml
+
+# ---- Editor, OS and local files ----
+.vscode/
+.idea/
+.DS_Store
+._*
+*.swp
+*.log
