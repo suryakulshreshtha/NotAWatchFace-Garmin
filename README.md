@@ -17,6 +17,15 @@ so the code can be read as a course. 🎓
 `SensorHistory` (pressure trend and altitude). Neither face uses the network
 or the phone.
 
+## 🏪 Get it and read about it
+
+| Face | Connect IQ Store |
+| --- | --- |
+| 🕐 Analogue | [NotAWatchFace Analogue](https://apps.garmin.com/apps/6a2355c0-1984-43ea-807d-c7742cecb055) |
+| 🔢 Digital | [NotAWatchFace Digital](https://apps.garmin.com/apps/8f0efe92-5363-4ee6-a537-8fa09dc91be7) |
+
+📝 How these faces went from VS Code to the store, step by step: [From VS Code to the Wrist: How to Publish a Watch Face on the Garmin Connect IQ Store](https://medium.com/suryakulshreshtha/from-vs-code-to-the-wrist-how-to-publish-a-watch-face-on-the-garmin-connect-iq-store-67d1be7e8bb3) on Medium, also on [Substack](https://suryakulshreshtha.substack.com/p/from-vs-code-to-the-wrist-how-to).
+
 ## 🖼️ Preview
 
 ![NotAWatchFaceAnalogue](assets/store-listing/NotAWatchFaceAnalogue/NotAWatchFaceAnalogue-hero-1440x720.png)

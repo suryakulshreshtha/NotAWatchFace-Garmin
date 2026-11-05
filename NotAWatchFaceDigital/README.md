@@ -4,6 +4,8 @@ Tactical digital watch face for the Garmin Instinct 2 Solar Tactical Edition
 (Connect IQ device `instinct2`, 176 x 176, black and white). Built to be
 sideloaded over USB.
 
+Also on the Connect IQ Store: [NotAWatchFace Digital](https://apps.garmin.com/apps/8f0efe92-5363-4ee6-a537-8fa09dc91be7).
+
 ## What it shows
 
 | Slot | Shows | Comes from |

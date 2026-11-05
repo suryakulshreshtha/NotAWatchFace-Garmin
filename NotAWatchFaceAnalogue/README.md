@@ -4,6 +4,8 @@ Three-hand analogue watch face for the Garmin Instinct 2 Solar Tactical Edition
 (Connect IQ device `instinct2`, 176 x 176, black and white). Built to be
 sideloaded over USB.
 
+Also on the Connect IQ Store: [NotAWatchFace Analogue](https://apps.garmin.com/apps/6a2355c0-1984-43ea-807d-c7742cecb055).
+
 ## What it shows
 
 - Hour and minute hands
